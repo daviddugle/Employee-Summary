@@ -33,3 +33,119 @@ const render = require("./lib/htmlRenderer");
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
+
+const whatNext = () => {
+    inquirer.prompt([
+        {
+            type: "list",
+            message: "What would you like to add next",
+            choices: ["Engineer", "Intern", "Completed"],
+            name: "next",
+        }
+
+    ])
+        .then(({ next }) => {
+            if (next === "Engineer") {
+                buildEngineer()
+            }
+            else if (next === "Intern") {
+                buildIntern();
+            }
+            else {
+                buildTeam();
+            }
+        })
+}
+
+const buildManager = () => {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "What is your name?",
+            name: "name",
+
+        },
+        {
+            type: "input",
+            message: "What is your id?",
+            name: "id",
+        },
+        {
+            type: "input",
+            message: "What is your email?",
+            name: "email",
+        },
+        {
+            type: "input",
+            message: "What is your office number?",
+            name: "officeNumber",
+        },
+    ])
+        .then(({ name, id, email, officeNumber }) => {
+            const newMgr = new Manager(name, id, email, officeNumber)
+            console.log(newMgr)
+            whatNext();
+        })
+}
+buildManager();
+
+const buildEngineer = () => {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "What is your name?",
+            name: "name",
+
+        },
+        {
+            type: "input",
+            message: "What is your id?",
+            name: "id",
+        },
+        {
+            type: "input",
+            message: "What is your email?",
+            name: "email",
+        },
+        {
+            type: "input",
+            message: "What is your Github name?",
+            name: "github",
+        },
+    ])
+        .then(({ name, id, email, github }) => {
+            const newEngineer = new Engineer(name, id, email, github)
+            console.log(newEngineer)
+            whatNext();
+        })
+}
+const buildIntern = () => {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "What is your name?",
+            name: "name",
+
+        },
+        {
+            type: "input",
+            message: "What is your id?",
+            name: "id",
+        },
+        {
+            type: "input",
+            message: "What is your email?",
+            name: "email",
+        },
+        {
+            type: "input",
+            message: "What is your School Name",
+            name: "school",
+        },
+    ])
+        .then(({ name, id, email, school }) => {
+            const newIntern = new Engineer(name, id, email, school)
+            console.log(newIntern)
+            whatNext();
+        })
+}
