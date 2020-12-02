@@ -69,7 +69,9 @@ In terminal make sure you do a NPM install. Then you would run node app.js. This
 
 ## Technologies Used
 
-* list your technologies used in the app
+* NPM Inquirer
+* NPM Jest
+* YouTube
 
 
 
@@ -119,7 +121,6 @@ I tested the application in terminal
 ![DeployedPhoto](https://github.com/daviddugle/Employee-Summary/blob/main/assets/Screenshot%202020-12-02%20145750.jpg?raw=true)
 ![DeployedPhoto](https://github.com/daviddugle/Employee-Summary/blob/main/assets/Screenshot%202020-12-02%20145908.jpg?raw=true)
 
-place your photo in the parentheses
 
 
 
