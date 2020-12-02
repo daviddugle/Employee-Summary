@@ -6,7 +6,7 @@
 
 
 
-![License](https://img.shields.io/badge/license-MITLicense-green)
+![License](https://img.shields.io/badge/license-MIT%20License-green)
 
 
 
